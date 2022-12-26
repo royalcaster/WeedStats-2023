@@ -4,6 +4,7 @@
     "slug": "WeedStats",
     "version": "1.0.0",
     "orientation": "portrait",
+    "scheme": "weedstats",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
@@ -18,14 +19,22 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "userInterfaceStyle": "light"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#FFFFFF",
+        "userInterfaceStyle": "light"
       }
     },
+    "plugins": [
+      [
+        "./plugin/withDisableForcedDarkModeAndroid.js",
+        {}
+      ]
+    ],
     "web": {
       "favicon": "./assets/favicon.png"
     }

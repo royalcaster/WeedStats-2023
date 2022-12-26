@@ -1,0 +1,81 @@
+<Animated.View style={{ transform: [{ scale: scaleAnim }] }}>
+
+      <LinearGradient
+        colors={getGradientColors(counter)}
+        style={{
+          width: "80%",
+          alignSelf: "center",
+          alignItems: "center",
+          borderRadius: 10,
+          marginTop: 20,
+          marginBottom: 20,
+          maxWidth: 700,
+        }}
+      >
+        
+        <View
+          style={{
+            borderWidth: 5,
+            borderColor: counter > 419 ? "#E6C743" : "rgba(255,255,255,0)",
+            width: "100%",
+            alignItems: "center",
+            borderRadius: 10,
+          }}
+        >
+          {type === "joint" ? (
+            <Image
+              style={styles.joint_img}
+              source={require("../../../../data/img/joint.png")}
+            />
+          ) : null}
+          {type === "bong" ? (
+            <Image style={styles.bong_img} source={require("../../../../data/img/bong.png")} />
+          ) : null}
+          {type === "vape" ? (
+            <Image style={styles.vape_img} source={require("../../../../data/img/vape.png")} />
+          ) : null}
+          {type === "pipe" ? (
+            <Image style={styles.pipe_img} source={require("../../../../data/img/pipe.png")} />
+          ) : null}
+          {type === "cookie" ? (
+            <Image
+              style={styles.cookie_img}
+              source={require("../../../../data/img/cookie.png")}
+            />
+          ) : null}
+          <LevelImage index={Math.floor(counter / 70)} />
+          <Text style={styles.counter_number}>{counter}</Text>
+          <Statusbar status={calcLevelStatus(counter)}></Statusbar>
+          <Text style={styles.level_label}>{calcLevelName(counter)}</Text>
+          <Pressable
+            onPressIn={() => {setButtonPressed(true); grow();}}
+            onPressOut={() => {setButtonPressed(false); shrink();}}
+            onLongPress={() => {
+              toggleCounter(type.toLowerCase());
+              setButtonPressed(false);
+            }}
+            style={({ pressed }) => [
+              { backgroundColor: pressed ? "#131520" : "#131520" },
+              styles.add_pressable,
+            ]}
+          >
+            <FontAwesome name="fire" style={styles.fire_icon} />
+            <Animated.View
+              style={{
+                transform: [{ scaleY: buttonFill }],
+                height: 220,
+                width: 200,
+                backgroundColor: "#0080FF",
+                zIndex: 9,
+                borderRadius: 0,
+                top: 0,
+                left: 0,
+                position: "absolute",
+              }}
+            ></Animated.View>
+          </Pressable>
+
+          {/* </Animated.View> */}
+        </View>
+      </LinearGradient>
+    </Animated.View>

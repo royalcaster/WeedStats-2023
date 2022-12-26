@@ -1,0 +1,30 @@
+[
+  {
+    "name":"Nappo",
+    "colors":["#50d036", "#2f831e"]
+  },
+  {
+    "name":"Beginner",
+    "colors":["#c5680f", "#673608"]
+  },
+  {
+    "name":"Amateur",
+    "colors":["#f8b127", "#b47805"]
+  },
+  {
+    "name":"Fortgeschrittener",
+    "colors":["#279cf8", "#0567b4"]
+  },
+  {
+    "name":"Smurf",
+    "colors":["#6236d0", "#3b1e83"]
+  },
+  {
+    "name":"Experte",
+    "colors":["#dc27f8", "#9c05b4"]
+  },
+  {
+    "name":"Legende",
+    "colors":["#f02e2e", "#ad0c0c"]
+  }
+]

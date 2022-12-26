@@ -1,0 +1,596 @@
+{
+    "de": {
+        "language_short": "de",
+        "activities": "Aktivitäten",
+        "in_the_last": "in den letzten",
+        "joint": "Joint",
+        "bong": "Bong",
+        "vape": "Vape",
+        "pipe": "Pfeife",
+        "cookie": "Edible",
+
+        "unlock_question": "Soll WeedStats zukünftig von dir entsperrt werden?",
+        "tutorial_question": "Willst du ein kurzes Tutorial sehen?",
+        "step": "Schritt",
+        "of_3": "von 3",
+        "activate_unlock": "Ja, Entsperren aktivieren",
+        "see_now": "Ja, jetzt ansehen",
+        "later": "Später",
+
+        "login": "Mit Google fortfahren",
+
+        "levels": [
+          {
+            "key": 0,
+            "name":"Nappo",
+            "colors":["#00DB4D", "#008F32", "#0B6B33"]
+          },
+          {
+            "key": 1,
+            "name":"Beginner",
+            "colors":["#FF792B", "#B3551E", "#99491A"]
+          },
+          {
+            "key": 2,
+            "name":"Amateur",
+            "colors":["#FFBB24", "#B38219", "#996F15"]
+          },
+          {
+            "key": 3,
+            "name":"Fortgeschrittener",
+            "colors":["#409FFF", "#2D70B3", "#266099"]
+          },
+          {
+            "key": 4,
+            "name":"Smurf",
+            "colors":["#9114FF", "#660EB3", "#570C99"]
+          },
+          {
+            "key": 5,
+            "name":"Experte",
+            "colors":["#F2338C", "#B32567", "#8C1D51"]
+          },
+          {
+            "key": 6,
+            "name":"Legende",
+            "colors":["#FC2044", "#B31731", "#961429"]
+          }
+        ],
+
+        "stats_overview": "Überblick",
+        "stats_week": "Woche",
+        "stats_month": "Monat",
+        "stats_year": "Jahr",
+        "stats_day": "Tag",
+        "stats_activities_in_last": "Aktivitäten in den letzten",
+        "stats_24h": "24 Stunden",
+        "stats_7d": "7 Tagen",
+        "stats_30d": "30 Tagen",
+        "stats_current_streak": "Aktueller Streak",
+        "stats_since": "seit",
+        "stats_DAY": "Tag",
+        "stats_DAYS": "TAGE",
+        "stats_longest_streak": "Längster Streak",
+        "stats_current_break": "Aktuelle Pause",
+        "stats_longest_break": "Längste Pause",
+        "stats_graphs": "Grafiken",
+        "stats_all": "Gesamt",
+        "stats_last_week": "letzte Woche",
+        "stats_last_month": "letzter Monat",
+        "stats_last_year": "letztes Jahr",
+        "stats_history": "Verlauf",
+
+        "map_heatmap": "HEATMAP",
+        "map_friends": "FREUNDE",
+
+        "main_all": "Gesamt",
+        "main_days_till_420": "Tage bis 420",
+
+        "config_counter": "Counter konfigurieren",
+        "config_personal_data": "Persönliche Daten",
+        "config_share_main_counter": "Gesamten Counter teilen",
+        "config_share_detail_counter": "Detailierten Counter teilen",
+        "config_share_last_activity": "Letzte Aktivität teilen",
+        "config_get_location": "Standort erfassen",
+        "config_share_location": "Standort teilen",
+        "config_security": "Sicherheit",
+        "config_unlock_on_launch": "WeedStats beim Start entsperren",
+        "config_language": "Sprache",
+        "config_other": "Sonstiges",
+        "config_lightmode": "Helles Design",
+        "config_info": "Info",
+        "config_authors": "Entwickler",
+        "config_save": "Speichern",
+        "config_saved": "Gespeichert",
+
+        "config_save": "Speichern",
+        "config_saved": "Gespeichert",
+
+        "config_modal_title": "Ist alles gut?",
+        "config_modal_text": "Uns ist aufgefallen, dass du den Lightmode aktivieren wolltest. Um dich und deine Mitmenschen zu schützen, lassen wir ihn ausgeschaltet.",
+        "config_modal_thanks": "Danke!",
+
+        "delete_account_title": "Achtung",
+        "delete_account_text": "Jegliche Einträge und Einstellungen werden gelöscht. Das kann nicht rückgängig gemacht werden. Willst du dieses WeedStats-Konto wirklich löschen?",
+        
+        "signout_title": "Abmelden?",
+
+        "friends_friends": "Freunde",
+        
+        "account_your_account": "DEIN KONTO",
+        "account_member_since": "Mitglied seit",
+        "account_levels": "Level",
+        "account_tutorial": "Tutorial",
+        "account_support": "Unterstützen",
+        "account_support_weedstats": "WeedStats unterstützen",
+        "account_sign_out": "Abmelden",
+        "account_delete_account": "Dieses Konto löschen",
+
+        "tutorial_swipe_text": "HOCHWISCHEN",
+        "tutorial_are_you_ready": "BIST DU BEREIT?",
+
+        "tutorial_welcome_title": "Willkommen",
+        "tutorial_welcome_text": "WeedStats bietet verschiedenste Möglichkeiten zum Erfassen, Auswerten und Teilen deines Gras-Konsums. \n\nDiese kurze Tour wird dir die wesentlichen Funktionen der App beibringen.",
+    
+        "tutorial_counter_title": "Counter",
+        "tutorial_counter_text": "Jedes mal, wenn du etwas rauchst, solltest du den jeweiligen Counter um eins erhöhen. Halte dazu den Button für kurze Zeit gedrückt.",
+        
+        "tutorial_stats_title": "Statistiken",
+        "tutorial_stats_text": "Hier findest du statistische Auswertungen zu deinem Konsum und deinen Rauch-Verlauf.",
+        
+        "tutorial_map_title": "WeedMap",
+        "tutorial_map_text": "Die Karte kann dir entweder eine Heatmap mit den Orten zeigen, an denen du am häufigsten geraucht hast, oder auch die letzten Aktivitäten deiner Freunde.",
+
+        "tutorial_config_title": "Einstellungen",
+        "tutorial_config_text": "Hier kannst du Einstellungen für deine Privatsphäre und die Anzeige treffen.",
+
+        "tutorial_friends_title": "Freunde",
+        "tutorial_friends_text": "Füge Freunde hinzu, um deine Statistiken mit ihnen zu teilen und das volle Potential von WeedStats auszuschöpfen!\n\nAußerdem kannst du hier auf deinen Account zugreifen.",
+
+        "tutorial_pls_read_title": "Bitte lies das",
+        "tutorial_pls_read_text": "Hier Hinweis auf Intention der App, keine Anregung zu Konsum, kein Konsum bei minderjährigen! Auch Verlinkung zu medizinischen Risiken, Hilfs-Hotlines, die App soll spaß machen, aber Verantwortungsvoller Konsum steht an oberster Priorität! \n\n ... \n\n ... \n\n ... \n\n ... \n\n ... \n\n ... \n\n ... \n\n ...",
+        
+        "tutorial_tipp_title": "Unser Tipp",
+        "tutorial_tipp_text": "Je gewissenhafter du deinen Konsum in der App einträgst, desto genauer werden deine Statistiken mit der Zeit. Wenn du schummelst, brauchst du die App nicht!\n\nWir wünschen dir viel Spaß mit WeedStats!",
+
+        "tutorial_consent": "Ich bin einverstanden",
+        "tutorial_consent_alert": "Bitte lies unsere Datenschutzbestimmungen.",
+        "tutorial_get_started": "Loslegen",
+        "tutorial_show_policy": "Datenschutzbestimmung anzeigen",
+
+        "friendpage_best": "BESTLEISTUNG",
+        "friendpage_last_activity": "Letzte Aktivität",
+        "friendpage_remove_friend": "Freund entfernen",
+
+        "searchpanel_title": "Suchen",
+        "searchpanel_empty": "Keine Suchergebnisse",
+        "searchpanel_question": "eine Freundschaftsanfrage senden?",
+
+        "friendrequests_title": "Anfragen",
+
+        "remove_friend": "als Freund entfernen?",
+        "send_request": "eine Freundschaftsanfrage senden?",
+        "already_sent": "bereits angefragt",
+
+        "success": "Erfolg",
+
+        "sayings": [  
+            {  
+               "saying":"Ich glaube, die Leute müssen über die Tatsache unterrichtet werden, dass Marihuana keine Droge ist. Marihuana ist eine Blume Gottes Gnade.",
+               "from":"Willie Nelson"
+            },
+            {  
+               "saying":"Das ist keine Droge, das ist ein Blatt.",
+               "from":"Arnold Schwarzenegger"
+            },
+            {  
+              "saying":"Ganja ist die Heilung einer Nation, Alkohol ist ihre Zerstörung.",
+              "from":"Bob Marley"
+            },
+            {  
+              "saying":"Mach das Beste, das du kannst aus den indischen Hanfsamen und säe ihn überall.",
+              "from":"George Washington"
+            },
+            {  
+              "saying":"Als ich ein Kind war habe ich häufig inhaliert. Darum ging es doch.",
+              "from":"Barack Obama"
+            },
+            {  
+              "saying":"Gras lässt mich das fühlen, was ich fühlen muss.",
+              "from":"Snoop Dogg"
+            },
+            {  
+              "saying":"Das erste Mal habe ich Gras mit meiner Mutter und meinem Stiefvater geraucht.",
+              "from":"Matt Damon"
+            },
+            {  
+              "saying":"Ich rauche viel Gras, wenn ich Songs schreibe.",
+              "from":"Lady Gaga"
+            },
+            {  
+              "saying":"Wenn man von einem unerträglichen Druck loskommen will, so hat man Haschisch nötig.",
+              "from":"Friedrich Nietzsche"
+            },
+            {  
+              "saying":"Natürlich weiß ich wie man einen Joint dreht.",
+              "from":"Martha Stewart"
+            },
+            {  
+              "saying":"Ich bin kein großer Kiffer oder sowas in der Art... aber Gras ist viel, viel weniger gefährlich als Alkohol.",
+              "from":"Johnny Depp"
+            },
+            {  
+              "saying":"[Ich] geb niemals das Ganja auf.",
+              "from":"Morgan Freemann"
+            },
+            {  
+              "saying":"Weißt du, wie viele Filme ich geschrieben habe, als ich high war?",
+              "from":"Jon Stewart"
+            },
+            {  
+              "saying":"Rauchen hat mir geholfen meine Sinne besser wahr zu nehmen. Ich habe eine ganz neue Dimension von Sex erfahren.",
+              "from":"Hugh Heffner"
+            },
+            {  
+              "saying":"Einige meiner schönsten Stunden habe ich auf meiner hinteren Veranda verbracht, Hanf geraucht und beobachtet, so weit mein Auge reicht.",
+              "from":"Thomas Jefferson"
+            },
+            {  
+              "saying":"Es ist schwer, gemein zu sein, wenn man bekifft ist.",
+              "from":"Bill Lee"
+            },
+            {  
+              "saying":"Gras macht mich immer schläfrig.",
+              "from":"Bryan Cranston"
+            },
+            {  
+              "saying":"Erstmal ein piefen.",
+              "from":"Vincent Pfäfflin"
+            },
+            {  
+              "saying":"Don't drink and drive, smoke and fly!",
+              "from":null
+            },
+            {  
+              "saying":"Rettet die Wälder, Hanf auf die Felder.",
+              "from":null
+            },
+            {  
+              "saying":"Hanf allein macht nicht glücklich, man muss ihn schon rauchen.",
+              "from":null
+            },
+            {  
+              "saying":"Roll it up, Light it up, Smoke it up!",
+              "from":null
+            },
+            {  
+              "saying":"Lieber ein Joint als kein Joint.",
+              "from":null
+            },
+            {  
+              "saying":"Am Morgen ein Joint und der Tag ist dein Freund.",
+              "from":null
+            },
+            {  
+              "saying":"Can-nabis denn Sünde sein?",
+              "from":null
+            },
+            {  
+              "saying":"Don't panic, it's organic.",
+              "from":null
+            },
+            {  
+              "saying":"Einatmen, halten, ausatmen und grinsen.",
+              "from":null
+            },
+            {  
+              "saying":"Entweder du liebst Gras oder du liegst falsch.",
+              "from":null
+            },
+            {  
+              "saying":"And God saith: 'Let there be happiness', and there was marijuana.",
+              "from":null
+            }
+          ]
+    },
+
+
+
+
+
+    "en": {
+        "language_short": "en",
+        "activities": "Activities",
+        "in_the_last": "in the last",
+        "joint": "Joint",
+        "bong": "Bong",
+        "vape": "Vape",
+        "pipe": "Pipe",
+        "cookie": "Edible",
+
+        "unlock_question": "Should WeedStats be unlocked by you from now on?",
+        "tutorial_question": "Do you want so see a quick tutorial?",
+        "step": "Step",
+        "of_3": "of 3",
+        "activate_unlock": "Yes, activate unlock",
+        "see_now": "Yes, see Tutorial now",
+        "later": "Later",
+
+        "login": "Continue with Google",
+
+        "levels": [
+          {
+            "key": 0,
+            "name":"Nappo",
+            "colors":["#00DB4D", "#008F32", "#0B6B33"]
+          },
+          {
+            "key": 1,
+            "name":"Beginner",
+            "colors":["#FF792B", "#B3551E", "#99491A"]
+          },
+          {
+            "key": 2,
+            "name":"Amateur",
+            "colors":["#FFBB24", "#B38219", "#996F15"]
+          },
+          {
+            "key": 3,
+            "name":"Fortgeschrittener",
+            "colors":["#409FFF", "#2D70B3", "#266099"]
+          },
+          {
+            "key": 4,
+            "name":"Smurf",
+            "colors":["#9114FF", "#660EB3", "#570C99"]
+          },
+          {
+            "key": 5,
+            "name":"Experte",
+            "colors":["#F2338C", "#B32567", "#8C1D51"]
+          },
+          {
+            "key": 6,
+            "name":"Legende",
+            "colors":["#FC2044", "#B31731", "#961429"]
+          }
+        ],
+
+        "stats_overview": "Overview",
+        "stats_week": "Week",
+        "stats_month": "Month",
+        "stats_year": "Year",
+        "stats_day": "Day",
+        "stats_activities_in_last": "Activities in the last",
+        "stats_24h": "24 Hours",
+        "stats_7d": "7 Days",
+        "stats_30d": "30 Days",
+        "stats_current_streak": "Current streak",
+        "stats_since": "since",
+        "stats_DAY": "DAY",
+        "stats_DAYS": "DAYS",
+        "stats_longest_streak": "Longest streak",
+        "stats_current_break": "Current break",
+        "stats_longest_break": "Longest break",
+        "stats_graphs": "Graphs",
+        "stats_all": "All",
+        "stats_last_week": "last week",
+        "stats_last_month": "last month",
+        "stats_last_year": "last year",
+        "stats_history": "History",
+
+        "map_heatmap": "H E A T M A P",
+        "map_friends": "F R I E N D S",
+
+        "main_all": "All",
+        "main_days_till_420": "Days till 420",
+
+        "config_counter": "Enable/disable counter",
+        "config_personal_data": "Personal data",
+        "config_share_main_counter": "Share main counter",
+        "config_share_detail_counter": "Share detailed counter",
+        "config_share_last_activity": "Share last activity",
+        "config_get_location": "Get location",
+        "config_share_location": "Share location",
+        "config_security": "Security",
+        "config_unlock_on_launch": "Unlock WeedStats on launch",
+        "config_language": "Language",
+        "config_other": "Other",
+        "config_info": "Info",
+        "config_authors": "Developper",
+        "config_lightmode": "Lightmode",
+        "config_save": "Save",
+        "config_saved": "Saved",
+
+        "config_modal_title": "Are you okay?",
+        "config_modal_text": "We noticed that you wanted to activate the light mode. To protect you and those around you, we leave it off.",
+        "config_modal_thanks": "Thank you!",
+
+        "config_save": "Save",
+        "config_saved": "Saved",
+
+        "signout_title": "Sign out?",
+
+        "delete_account_title": "Attention",
+        "delete_account_text": "This cannot be undone. Are you sure you want to delete this WeedStats account?",
+
+        "friends_friends": "Friends",
+        
+        "account_your_account": "YOUR ACCOUNT",
+        "account_member_since": "Member since",
+        "account_levels": "Levels",
+        "account_tutorial": "Tutorial",
+        "account_support": "Support",
+        "account_support_weedstats": "Support WeedStats",
+        "account_sign_out": "Sign Out",
+        "account_delete_account": "Delete this account",
+
+        "tutorial_swipe_text": "SWIPE UP",
+        "tutorial_are_you_ready": "ARE YOU READY?",
+
+        "tutorial_welcome_title": "Welcome",
+        "tutorial_welcome_text": "WeedStats offers various ways to record, evaluate and share your weed consumption. \n\nThis short tour will teach you the essential functions of the app.",
+    
+        "tutorial_counter_title": "Counter",
+        "tutorial_counter_text": "Every time you smoke something, you should increase the respective counter by one. To do this, hold down the button for a short time.",
+        
+        "tutorial_stats_title": "Statistics",
+        "tutorial_stats_text": "Here you will find statistical evaluations of your consumption and your smoking history.",
+        
+        "tutorial_map_title": "WeedMap",
+        "tutorial_map_text": "The map can either show you a heatmap of the places where you've smoked the most, or your friends' recent activities.",
+
+        "tutorial_config_title": "Settings",
+        "tutorial_config_text": "Here you can make settings for your privacy and the display.",
+
+        "tutorial_friends_title": "Friends",
+        "tutorial_friends_text": "Add friends to share your stats with them and unlock the full potential of WeedStats!\n\nYou can also access your account here.",
+
+        "tutorial_pls_read_title": "Please read this",
+        "tutorial_pls_read_text": "Here reference to the intention of the app, no suggestion to use, no use by minors! Also links to medical risks, help hotlines, the app should be fun, but responsible consumption is the top priority! \n\n... \n\n... \n\n... \n\n... \n\n... \n\n... \n\n... \n\n... \n\n...",
+        
+        "tutorial_tipp_title": "Our tipp",
+        "tutorial_tipp_text": "The more honest you enter your consumption in the app, the more accurate your statistics will become over time. If you cheat, you don't need the app!\n\nHave fun with WeedStats!",
+
+        "tutorial_consent": "I agree",
+        "tutorial_consent_alert": "Please read our privacy policy.",
+        "tutorial_get_started": "Get started",
+        "tutorial_show_policy": "Show privacy policy",
+
+        "friendpage_best": "BEST",
+        "friendpage_last_activity": "Last activity",
+        "friendpage_remove_friend": "Remove friend",
+
+        "searchpanel_title": "Search",
+        "searchpanel_empty": "No results",
+        "searchpanel_question": "Send friend request to",
+
+        "friendrequests_title": "Requests",
+
+        "remove_friend": "Remove friend",
+        "send_request": "Send friend reqest to",
+        "already_sent": "Already sent request to",
+
+        "success": "Success", 
+        
+        "sayings": [  
+            {  
+               "saying":"I think people need to be educated on the fact that marijuana is not a drug. Marijuana is a flower of God's grace.",
+               "from":"Willie Nelson"
+            },
+            {  
+               "saying":"This is not a drug, this is a leaf.",
+               "from":"Arnold Schwarzenegger"
+            },
+            {  
+              "saying":"Ganja is healing a nation, alcohol is destroying it.",
+              "from":"Bob Marley"
+            },
+            {  
+              "saying":"Do the best you can with Indian cannabis seeds and sow them everywhere.",
+              "from":"George Washington"
+            },
+            {  
+              "saying":"When I was a child I used to inhale frequently. That's what it was all about.",
+              "from":"Barack Obama"
+            },
+            {  
+              "saying":"Weed makes me feel what I need to feel.",
+              "from":"Snoop Dogg"
+            },
+            {  
+              "saying":"I first smoked weed with my mom and stepdad.",
+              "from":"Matt Damon"
+            },
+            {  
+              "saying":"I smoke a lot of weed when I'm writing songs.",
+              "from":"Lady Gaga"
+            },
+            {  
+              "saying":"If you want to get rid of an unbearable pressure, you need hashish.",
+              "from":"Friedrich Nietzsche"
+            },
+            {  
+              "saying":"Of course I know how to roll a joint.",
+              "from":"Martha Stewart"
+            },
+            {  
+              "saying":"I'm not a big stoner or anything like that... but weed is much, much less dangerous than alcohol.",
+              "from":"Johnny Depp"
+            },
+            {  
+              "saying":"[I] never give up ganja.",
+              "from":"Morgan Freemann"
+            },
+            {  
+              "saying":"Do you know how many movies I wrote while I was high?",
+              "from":"Jon Stewart"
+            },
+            {  
+              "saying":"Smoking has helped me to perceive my senses better. I experienced a whole new dimension of sex.",
+              "from":"Hugh Heffner"
+            },
+            {  
+              "saying":"Some of my happiest hours have been spent on my back porch, smoking weed and watching as far as my eyes can see.",
+              "from":"Thomas Jefferson"
+            },
+            {  
+              "saying":"It's hard to be mean when you're stoned.",
+              "from":"Bill Lee"
+            },
+            {  
+              "saying":"Weed always makes me sleepy.",
+              "from":"Bryan Cranston"
+            },
+            {  
+              "saying":"First a puff.",
+              "from":"Vincent Pfäfflin"
+            },
+            {  
+              "saying":"Don't drink and drive, smoke and fly!",
+              "from":null
+            },
+            {  
+              "saying":"Save the forests, hemp to the fields.",
+              "from":null
+            },
+            {  
+              "saying":"Hemp alone does not make you happy, you do have to smoke it.",
+              "from":null
+            },
+            {  
+              "saying":"Roll it up, Light it up, Smoke it up!",
+              "from":null
+            },
+            {  
+              "saying":"Better a joint than no joint.",
+              "from":null
+            },
+            {  
+              "saying":"Roll it up, Light it up, Smoke it up!",
+              "from":null
+            },
+            {  
+              "saying":"Can-nabis be a sin?",
+              "from":null
+            },
+            {  
+              "saying":"Don't panic, it's organic.",
+              "from":null
+            },
+            {  
+              "saying":"Inhale, hold, exhale and grin.",
+              "from":null
+            },
+            {  
+              "saying":"Either you love weed or you're wrong.",
+              "from":null
+            },
+            {  
+              "saying":"And God says: 'Let there be happiness', and there was marijuana.",
+              "from":null
+            }
+          ]
+    }
+
+}
