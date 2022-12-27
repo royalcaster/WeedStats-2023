@@ -176,7 +176,7 @@ const CounterItem = ({ type, counter, toggleCounter, toggleBorderColor }) => {
         <View style={styles.grab}></View>
           <View style={{flex: 1, flexDirection: "row", padding: 5, paddingBottom: 0}}>
             <View style={{flex: 2, alignItems: "center", flexGrow: 3}}>
-              <Text style={styles.counter_number}>{counter}</Text>
+              <Text style={styles.counter_number}>{counter > 0 ? counter : "0"}</Text>
             </View>
             <View style={{flex: 5, padding: 5, maxHeight: responsiveHeight(7)}}>
               <Statusbar status={calcLevelStatus(counter)} />

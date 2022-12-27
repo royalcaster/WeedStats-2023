@@ -79,7 +79,6 @@ const App = () => {
     loadSettings();
     checkForUser();
     getFriendList();
-
   },[]);
 
   useEffect(() => {
@@ -91,20 +90,25 @@ const App = () => {
   //wartet auf Änderung des Auth-Objekts
   useEffect(() => {
     if (response?.type === "success") {
-      setAccessToken(response.authentication.accessToken);
-      getUserData();
+      let accessToken = response.authentication.accessToken;
+      AsyncStorage.setItem("accessToken", accessToken);
+      if (!response.error) {
+        console.log("kein Error");
+        getUserData(accessToken);
+      }
     }
   }, [response]);
 
-  const getUserData = async () => {
-    let userInfoResponse = await fetch("https://www.googleapis.com/userinfo/v2/me", {
-      headers: { Authorization: `Bearer ${accessToken}`}
-    });
-
-    userInfoResponse.json().then(data => {
-      console.debug(data);
-      refreshUser(data);
-    });
+  const getUserData = async ( accessToken ) => {
+    if (accessToken != null) {
+      let userInfoResponse = await fetch("https://www.googleapis.com/userinfo/v2/me", {
+        headers: { Authorization: `Bearer ${accessToken}`}
+      });
+      userInfoResponse.json().then(data => {
+        refreshUser(data);
+        setLoading(false);
+      });
+    }
   }
 
   //Holt Einstellungen aus dem AsyncStorage
@@ -157,10 +161,14 @@ const App = () => {
 
   //Sucht im AsyncStorage nach dem letzten User der sich eingeloggt hat und loggt sich bei Erfolg automatisch ein
   const checkForUser = async () => {
-    setLoading(true);
+    /* setLoading(true);
     const current_user = await getCurrentUser();
     current_user != null ? refreshUser(current_user) : null;
-    setLoading(false);
+    setLoading(false); */
+    const accessToken = await AsyncStorage.getItem("accessToken");
+    console.log(accessToken);
+    getUserData(accessToken);
+    
   }
 
   //Lädt Freundesliste des angemeldeten Nutzers herunter
@@ -204,9 +212,10 @@ const App = () => {
       console.log("Error in App.js: ", e);
     }
 
-    const docRef = doc(firestore, "users", user.id);
-    const docSnap = await getDoc(docRef);
-
+    if (user.id) {
+      const docRef = doc(firestore, "users", user.id);
+      const docSnap = await getDoc(docRef);
+    
     if (docSnap.exists()) {
       //Nutzerdokument existiert -> Nutzer-State mit Daten füllen
       setUser({
@@ -280,28 +289,6 @@ const App = () => {
         console.log("Error:", e);
       }
 
-      //Einstellungs-Objekt im Local Storage erstmalig einrichten:
-      /* try {
-        const value = JSON.stringify({
-          showJoint: true,
-          showBong: true,
-          showVape: true,
-          showPipe: true,
-          showCookie: true,
-          shareMainCounter: false,
-          shareTypeCounters: false,
-          shareLastEntry: false,
-          saveGPS: false,
-          shareGPS: false,
-          localAuthenticationRequired: false,
-          language: "en",
-          first: true
-        });
-        await AsyncStorage.setItem("settings", value);
-      } catch (e) {
-        console.log("Error in App.js: ", e);
-      } */
-
       //Counter-Object im Local Storage erstmalig einrichten:
       try {
         const value = JSON.stringify({
@@ -317,11 +304,14 @@ const App = () => {
         console.log("Error in App.js: ", e);
       }
     }
+    }
   };
 
-  //behandelt Login-Event NEU
+  //behandelt Login-Event NEU 
+  //WICHTIG: in Expo Go useProxy: true; für Build unbedingt auf false setzen
   const handleLogin = () => {
-    promptAsync({useProxy: true, showInRecents: true})
+    setLoading(true);
+    promptAsync({useProxy: true, showInRecents: true});
   }
 
   //behandelt Login-Event !!!ALT!!! (Package deprecated)

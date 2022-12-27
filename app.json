@@ -18,25 +18,23 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true,
-      "userInterfaceStyle": "light"
-    },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF",
-        "userInterfaceStyle": "light"
-      }
+        "backgroundColor": "#FFFFFF"
+      },
+      "userInterfaceStyle": "light",
+      "package": "com.royalcaster.WeedStats"
     },
-    "plugins": [
+   /*  "plugins": [
       [
         "./plugin/withDisableForcedDarkModeAndroid.js",
         {}
       ]
-    ],
+    ], */
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "githubUrl": "https://github.com/royalcaster/WeedStats-Mobile"
   }
 }
