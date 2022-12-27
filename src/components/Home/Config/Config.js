@@ -155,7 +155,7 @@ const Config = ({ toggleLanguage, loadSettings }) => {
           <ScrollView style={{ width: "100%"}}>
             <View style={{height: responsiveHeight(7)}}></View>
 
-            <Text style={styles.bold_heading}>Settings</Text>
+            <Text style={styles.bold_heading}>{language.config_settings}</Text>
             <Text style={styles.heading}>{language.config_counter}</Text>
 
             <View style={{ flexDirection: "row", width: "90%", alignSelf: "center"}}>

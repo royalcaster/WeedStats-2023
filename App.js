@@ -387,7 +387,7 @@ const App = () => {
 
 //behandelt LogOut-Event
 const handleLogOut = async () => {
-  try {
+  /* try {
     await Google.logOutAsync({
       androidClientId:
         "31827165734-rdbihglcac1juesc6fkjd4bgp1c1oj2s.apps.googleusercontent.com",
@@ -398,7 +398,13 @@ const handleLogOut = async () => {
   } catch (e) {
     console.log("Error:", e);
   }
+  setUser(null); */
+
+  setLoading(true);
+  AsyncStorage.removeItem("accessToken");
   setUser(null);
+  setLoading(false);
+
 };
 
 
@@ -633,7 +639,7 @@ const deleteAccount = async () => {
         <Splash onExit={() => {setShowSplash(false);}}/>
         : 
         <>
-          {loading ? <View style={{justifyContent: "center", height: "100%"}}><CustomLoader color={"white"} x={80}/></View>
+          {loading ? <View style={{justifyContent: "center", height: "100%"}}><CustomLoader color={"#c4c4c4"} x={50}/></View>
           :
           <>
             

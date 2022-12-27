@@ -86,6 +86,7 @@
         "main_all": "Gesamt",
         "main_days_till_420": "Tage bis 420",
 
+        "config_settings": "Einstellungen",
         "config_counter": "Counter konfigurieren",
         "config_personal_data": "Persönliche Daten",
         "config_share_main_counter": "Gesamten Counter teilen",
@@ -385,6 +386,7 @@
         "main_all": "All",
         "main_days_till_420": "Days till 420",
 
+        "config_settings": "Settings",
         "config_counter": "Enable/disable counter",
         "config_personal_data": "Personal data",
         "config_share_main_counter": "Share main counter",
