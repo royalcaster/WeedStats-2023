@@ -11,6 +11,7 @@ import ProfileImage from "../../../common/ProfileImage";
 import Button from "../../../common/Button";
 import BackButton from "../../../common/BackButton";
 import AppInfo from "./AppInfo/AppInfo";
+import ProfileImagePanel from "../../../common/ProfileImagePanel";
 
 //Tools
 import { convertMemberSince } from "../../../../data/DateConversion";
@@ -39,6 +40,7 @@ const Account = ({ handleLogOut, onexit, show, toggleNavbar, deleteAccount }) =>
   const [showFeedback, setShowFeedback] = useState(false);
   const [showTutorial, setShowTutorial] = useState(false);
   const [showAppInfo, setShowAppInfo] = useState(false);
+  const [showProfilePicture, setShowProfilePicture] = useState(false);
 
   const opacityAnim = useRef(new Animated.Value(0)).current;
   const pan = useRef(new Animated.Value(0)).current;
@@ -87,7 +89,7 @@ const Account = ({ handleLogOut, onexit, show, toggleNavbar, deleteAccount }) =>
       } 
     },
     onMoveShouldSetPanResponder: (event, gesture) => {
-      if (!showTutorial) {
+      if (!showTutorial && !showDelete && !showLogOut) {
         return true;
       } 
     },
@@ -116,6 +118,10 @@ const Account = ({ handleLogOut, onexit, show, toggleNavbar, deleteAccount }) =>
       {showDonation ? <Donation onexit={() => setShowDonation(false)}/>                           : null}
       {showTutorial ? <Tutorial onDone={() => setShowTutorial(false)} toggleNavbar={toggleNavbar} type={"regular"}/> : null}
       {showAppInfo ? <AppInfo show={showAppInfo} onExit={() => setShowAppInfo(false)}/> : null}
+
+      <Modal animationType="fade" visible={showProfilePicture}>
+        <ProfileImagePanel url={user.photoUrl} onExit={() => setShowProfilePicture(false)}/>
+      </Modal>
 
       <Modal animationType="fade" transparent={true} visible={showDelete}>
         <View
@@ -165,20 +171,7 @@ const Account = ({ handleLogOut, onexit, show, toggleNavbar, deleteAccount }) =>
                   alignItems: "center",
                 }}
               >
-                <TouchableNativeFeedback
-                  background={TouchableNativeFeedback.Ripple(
-                    "rgba(255,255,255,0.05)",
-                    true
-                  )}
-                  onPress={() => setShowDelete(false)}
-                >
-                  <View style={styles.touchable}>
-                    <Antdesign
-                      name="close"
-                      style={[styles.icon, { color: "#eb4034" }]}
-                    />
-                  </View>
-                </TouchableNativeFeedback>
+                <Button title={language.account_delete_account_cancel} onPress={() => setShowDelete(false)} color={"#484F78"} fontColor={"white"}/>
               </View>
               <View
                 style={{
@@ -187,20 +180,7 @@ const Account = ({ handleLogOut, onexit, show, toggleNavbar, deleteAccount }) =>
                   alignItems: "center",
                 }}
               >
-                <TouchableNativeFeedback
-                  background={TouchableNativeFeedback.Ripple(
-                    "rgba(255,255,255,0.05)",
-                    true
-                  )}
-                  onPress={() => deleteAccount()}
-                >
-                  <View style={styles.touchable}>
-                    <Antdesign
-                      name="check"
-                      style={[styles.icon, { color: "#3BA426" }]}
-                    />
-                  </View>
-                </TouchableNativeFeedback>
+                <Button title={language.account_delete_account_submit} onPress={() => deleteAccount()} color={"#eb4034"} fontColor={"white"}/>
               </View>
             </View>
           </View>
@@ -250,20 +230,7 @@ const Account = ({ handleLogOut, onexit, show, toggleNavbar, deleteAccount }) =>
                   alignItems: "center",
                 }}
               >
-                <TouchableNativeFeedback
-                  background={TouchableNativeFeedback.Ripple(
-                    "rgba(255,255,255,0.05)",
-                    true
-                  )}
-                  onPress={() => setShowLogOut(false)}
-                >
-                  <View style={styles.touchable}>
-                    <Antdesign
-                      name="close"
-                      style={[styles.icon, { color: "#eb4034" }]}
-                    />
-                  </View>
-                </TouchableNativeFeedback>
+                <Button title={language.account_delete_account_cancel} onPress={() => setShowLogOut(false)} color={"#484F78"} fontColor={"white"}/>
               </View>
               <View
                 style={{
@@ -272,20 +239,7 @@ const Account = ({ handleLogOut, onexit, show, toggleNavbar, deleteAccount }) =>
                   alignItems: "center",
                 }}
               >
-                <TouchableNativeFeedback
-                  background={TouchableNativeFeedback.Ripple(
-                    "rgba(255,255,255,0.05)",
-                    true
-                  )}
-                  onPress={() => handleLogOut()}
-                >
-                  <View style={styles.touchable}>
-                    <Antdesign
-                      name="check"
-                      style={[styles.icon, { color: "#3BA426" }]}
-                    />
-                  </View>
-                </TouchableNativeFeedback>
+                <Button title={language.account_sign_out} onPress={() => handleLogOut()} color={"#eb4034"} fontColor={"white"}/>
               </View>
             </View>
           </View>
@@ -303,9 +257,9 @@ const Account = ({ handleLogOut, onexit, show, toggleNavbar, deleteAccount }) =>
       >
         <View style={{height: responsiveHeight(2.5)}}></View>
         <View style={{width: "20%", height: 10, backgroundColor: "#1E2132", borderRadius: 50, alignSelf: "center"}}></View>
-        <View style={{ width: "100%", justifyContent: "center", flex: 0.75}}>
+        <View style={{ width: "100%", justifyContent: "center", flex: 1}}>
           <View style={{ marginLeft: 5, position: "absolute" }}>
-            <View style={{ transform: [{ rotate: "-90deg" }] }}>
+            <View style={{ transform: [{ rotate: "-90deg" }], zIndex: 20, left: responsiveWidth(7)}}>
               <BackButton
                 onPress={() => {
                   onexit();
@@ -316,11 +270,10 @@ const Account = ({ handleLogOut, onexit, show, toggleNavbar, deleteAccount }) =>
           </View>
           <Text
             style={{
-              alignSelf: "center",
-              color: "rgba(255,255,255,0.75)",
-              fontSize: responsiveFontSize(1.7),
-              fontFamily: "PoppinsLight",
-              letterSpacing: 2,
+              textAlign: "center",
+              color: "rgba(255,255,255,1)",
+              fontSize: responsiveFontSize(3),
+              fontFamily: "PoppinsBlack"
             }}
           >
             {language.account_your_account}
@@ -332,21 +285,23 @@ const Account = ({ handleLogOut, onexit, show, toggleNavbar, deleteAccount }) =>
             alignItems: "center",
             flex: 1,
             flexDirection: "row",
-            width: "100%",
+            width: "80%",
             alignSelf: "center",
             paddingRight: 20,
             paddingLeft: 20,
-            height: 100
+            height: 100,
+            backgroundColor: "#484F78",
+            borderRadius: 15
           }}
         >
           <View
             style={{ flex: 1, justifyContent: "center", alignItems: "center"}}
           >
-              <TouchableNativeFeedback background={TouchableNativeFeedback.Ripple("rgba(255,255,255,0.25)", true)} style={{overflow: "hidden"}}>
+              <TouchableNativeFeedback background={TouchableNativeFeedback.Ripple("rgba(255,255,255,0.25)", true)} style={{overflow: "hidden"}} onPress={() => setShowProfilePicture(true)}>
                   <View style={styles.touchable_profileimage}>
                   </View>
               </TouchableNativeFeedback>
-            <ProfileImage url={user.photoUrl} x={70} type={1} />
+            <ProfileImage url={user.photoUrl} x={70} type={1} circle={true} circleColor={"#484F78"}/>
             
           </View>
 
@@ -356,16 +311,16 @@ const Account = ({ handleLogOut, onexit, show, toggleNavbar, deleteAccount }) =>
           </View>
         </View>
 
-        <View style={{ flex: 1, justifyContent: "center"}}>
+        <View style={{ flex: 0.5, justifyContent: "center", backgroundColor: "#1E2132", width: "80%", alignSelf: "center", borderRadius: 15, marginTop: 10}}>
           <Text
             style={{
               alignSelf: "center",
-              color: "rgba(255,255,255,0.75)",
-              fontSize: responsiveFontSize(1.7),
-              fontFamily: "PoppinsLight",
+              color: "rgba(255,255,255,1)",
+              fontSize: responsiveFontSize(1.8),
+              fontFamily: "PoppinsMedium",
             }}
           >
-            {language.account_member_since} <Text style={{color: "#0781E1"}}>{convertMemberSince(user.member_since)}</Text>
+            {language.account_member_since} <Text style={{color: "#0781E1", fontFamily: "PoppinsBlack"}}>{convertMemberSince(user.member_since)}</Text>
           </Text>
         </View>
 

@@ -19,8 +19,11 @@ const Stats = () => {
   const [localDataLoaded, setLocalDataLoaded] = useState(false);
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
-  useEffect( async () => {
-    localDataLoaded ? null : setLocalData(await getLocalData(user, () => setLocalDataLoaded(true)));
+  useEffect( () => {
+    async function test() {
+      localDataLoaded ? null : setLocalData(await getLocalData(user, () => setLocalDataLoaded(true)));
+    }
+    test();
     setLocalDataLoaded(true);
     Animated.timing(fadeAnim, {
       toValue: 1,

@@ -12,6 +12,7 @@ import levels from "../../../../../data/Levels.json";
 //Service
 import { LanguageContext } from "../../../../../data/LanguageContext";
 import { responsiveFontSize, responsiveHeight } from "react-native-responsive-dimensions";
+import { useBackHandler } from "@react-native-community/hooks";
 
 const Levels = ({ onexit, show }) => {
 
@@ -42,6 +43,11 @@ const Levels = ({ onexit, show }) => {
   };
 
   show ? slide() : hide();
+
+  useBackHandler(() => {
+    hide();
+    return true;
+  },[]);
 
   return (
     <Animated.View style={[{ opacity: 1 , transform: [{translateX: fadeAnim}]}, styles.container]}>

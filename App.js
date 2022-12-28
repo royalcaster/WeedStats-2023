@@ -39,6 +39,7 @@ import sayings from './src/data/Sayings'
 import { useFonts } from "expo-font";
 import * as Google from 'expo-auth-session/providers/google'
 import * as WebBrowser from 'expo-web-browser'
+import { makeRedirectUri } from "expo-auth-session";
 
 //Custom Components
 import CounterModal from './src/components/common/CounterModal'
@@ -72,10 +73,12 @@ const App = () => {
   const [request, response, promptAsync] = Google.useAuthRequest(
     {
       clientId: '31827165734-u3jrb2as9sa0fv334oj4tpgnsqm5utoj.apps.googleusercontent.com',
+      redirectUri: makeRedirectUri({ useProxy: true })
     },
   );
 
   useEffect(() => {
+    StatusBar.setBackgroundColor("#1E2132");
     loadSettings();
     checkForUser();
     getFriendList();

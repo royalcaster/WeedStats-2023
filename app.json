@@ -1,8 +1,10 @@
 {
   "expo": {
     "name": "WeedStats",
+    "currentFullName": "@royalcaster/WeedStats",
+    "originalFullName": "@royalcaster/WeedStats",
     "slug": "WeedStats",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "orientation": "portrait",
     "scheme": "weedstats",
     "icon": "./assets/icon.png",
@@ -10,10 +12,11 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#1E2132"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/745d1412-8cd1-4bb9-a3f0-3639efef0bdf"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -21,20 +24,24 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#1E2132"
       },
-      "userInterfaceStyle": "light",
       "package": "com.royalcaster.WeedStats"
     },
-   /*  "plugins": [
-      [
-        "./plugin/withDisableForcedDarkModeAndroid.js",
-        {}
-      ]
-    ], */
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "githubUrl": "https://github.com/royalcaster/WeedStats-Mobile"
+    "githubUrl": "https://github.com/royalcaster/WeedStats-Mobile",
+    "extra": {
+      "eas": {
+        "projectId": "745d1412-8cd1-4bb9-a3f0-3639efef0bdf"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "ios": {
+      "bundleIdentifier": "com.royalcaster.WeedStats"
+    }
   }
 }

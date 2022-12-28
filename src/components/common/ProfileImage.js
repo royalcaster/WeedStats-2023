@@ -2,7 +2,7 @@
 import React from "react";
 import { View, Image} from "react-native";
 
-const ProfileImage = ({ x, url, type }) => {
+const ProfileImage = ({ x, url, type, circle, circleColor }) => {
   return (
     <View
       style={{
@@ -10,7 +10,9 @@ const ProfileImage = ({ x, url, type }) => {
         width: x,
         borderRadius: type == 1 ? 100 : 0,
         overflow: "hidden",
-        zIndex: 0
+        zIndex: 0,
+        borderColor: circleColor,
+        borderWidth: circle ? 2 : 0
       }}
     >
       <Image style={{ height: "100%" }} source={{ uri: url }} />

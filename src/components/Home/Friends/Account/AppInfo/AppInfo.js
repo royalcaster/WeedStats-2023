@@ -12,6 +12,7 @@ import { responsiveFontSize, responsiveHeight } from "react-native-responsive-di
 
 //Third Party
 import Entypo from 'react-native-vector-icons/Entypo'
+import { useBackHandler } from "@react-native-community/hooks";
 
 const AppInfo = ({ onExit, show }) => {
 
@@ -43,6 +44,11 @@ const AppInfo = ({ onExit, show }) => {
 
   show ? slide() : hide();
 
+  useBackHandler(() => {
+    hide();
+    return true;
+  },[]);
+
   return (
     <Animated.View style={[{ opacity: 1 , transform: [{translateX: fadeAnim}]}, styles.container]}>
 
@@ -58,7 +64,7 @@ const AppInfo = ({ onExit, show }) => {
               <View style={{flex: 1, justifyContent: "center"}}>
                 <Image style={{height: responsiveHeight(12), width: responsiveHeight(12), alignSelf: "center"}} source={require('../../../../../data/img/logo.png')}/>
                 <Text style={[styles.text, { fontSize: responsiveFontSize(2) }]}>
-                  Version 0.25
+                  Version 2.0
                 </Text>
 
                 <View style={{ height: responsiveHeight(5)}}></View>

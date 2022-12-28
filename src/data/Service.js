@@ -5,7 +5,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage"
 
 //Tools
 import toGermanDate from "./DateConversion";
-/* import { summary, streakRanges, trackRecord } from "date-streaks"; */
+import { summary, streakRanges, trackRecord } from "date-streaks";
 
 // Lädt das Nutzer-Objekt aus dem AsyncStorage
 const getLocalUser = async () => {

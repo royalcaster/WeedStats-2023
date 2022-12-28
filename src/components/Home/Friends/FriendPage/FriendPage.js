@@ -7,6 +7,7 @@ import ProfileImage from '../../../common/ProfileImage'
 import Best from "./Best/Best";
 import BackButton from "../../../common/BackButton";
 import CustomLoader from "../../../common/CustomLoader";
+import ProfileImagePanel from "../../../common/ProfileImagePanel";
 
 //Third Party
 import { responsiveHeight, responsiveFontSize, responsiveWidth } from "react-native-responsive-dimensions";
@@ -39,6 +40,8 @@ const FriendPage = ({ show, userid, onExit, refresh, toggleNavbar }) => {
   const slideAnim2 = useRef(new Animated.Value(0)).current;
   const opacityAnim = useRef(new Animated.Value(0)).current;
   const opacityAnim2 = useRef(new Animated.Value(0)).current;
+  const [showProfilePicture, setShowProfilePicture] = useState(false);
+
 
   useEffect(() => {
     if (userid) {
@@ -273,6 +276,11 @@ const FriendPage = ({ show, userid, onExit, refresh, toggleNavbar }) => {
         {...panResponder.panHandlers}
           style={[styles.container, { transform: [{ translateX: pan }], height: Dimensions.get("screen").height }]}
         >
+
+      <Modal animationType="fade" visible={showProfilePicture}>
+        <ProfileImagePanel url={user.photoUrl} onExit={() => setShowProfilePicture(false)}/>
+      </Modal>
+
           <Modal
             animationType="fade"
             transparent={true}
@@ -374,10 +382,22 @@ const FriendPage = ({ show, userid, onExit, refresh, toggleNavbar }) => {
             </View>
 
             <View style={{alignSelf: "center"}}>
-              <View style={{alignSelf: "center"}}>
+
+            <View
+            style={{ flex: 1, justifyContent: "center", alignItems: "center", zIndex: 1000}}
+            >
+                <TouchableNativeFeedback background={TouchableNativeFeedback.Ripple("rgba(255,255,255,0.25)", true)} /* style={{overflow: "hidden"}} */ onPress={() => setShowProfilePicture(true)}>
+                    <View style={styles.touchable_profileimage}>
+                    </View>
+                </TouchableNativeFeedback>
+              <ProfileImage url={user.photoUrl} x={90} type={1} circle={true} circleColor={"#484F78"}/>
+              
+            </View>
+
+              {/* <View style={{alignSelf: "center"}}>
               {!loading ? 
               <ProfileImage url={user.photoUrl} x={responsiveHeight(9)} type={1}/> : <View style={{height: 80}}></View>}
-              </View>
+              </View> */}
 
               <View style={{height: responsiveHeight(1)}}></View>
 
@@ -745,5 +765,12 @@ const styles = StyleSheet.create({
     fontFamily: "PoppinsLight",
     fontSize: responsiveFontSize(1.5),
     margin: 20
+  },
+  touchable_profileimage: {
+    zIndex: 1,
+    position: "absolute",
+    height: 70,
+    width: 70,
+    borderRadius: 100
   }
 });

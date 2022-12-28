@@ -118,7 +118,7 @@
 
         "friends_friends": "Freunde",
         
-        "account_your_account": "DEIN KONTO",
+        "account_your_account": "Dein Konto",
         "account_member_since": "Mitglied seit",
         "account_levels": "Level",
         "account_tutorial": "Tutorial",
@@ -126,6 +126,8 @@
         "account_support_weedstats": "WeedStats unterstützen",
         "account_sign_out": "Abmelden",
         "account_delete_account": "Dieses Konto löschen",
+        "account_delete_account_submit": "Löschen",
+        "account_delete_account_cancel": "Abbrechen",
 
         "tutorial_swipe_text": "HOCHWISCHEN",
         "tutorial_are_you_ready": "BIST DU BEREIT?",
@@ -418,7 +420,7 @@
 
         "friends_friends": "Friends",
         
-        "account_your_account": "YOUR ACCOUNT",
+        "account_your_account": "Your account",
         "account_member_since": "Member since",
         "account_levels": "Levels",
         "account_tutorial": "Tutorial",
@@ -426,6 +428,9 @@
         "account_support_weedstats": "Support WeedStats",
         "account_sign_out": "Sign Out",
         "account_delete_account": "Delete this account",
+        "account_delete_account_submit": "Delete",
+        "account_delete_account_cancel": "Cancel",
+
 
         "tutorial_swipe_text": "SWIPE UP",
         "tutorial_are_you_ready": "ARE YOU READY?",
