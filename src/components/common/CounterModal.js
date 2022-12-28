@@ -71,7 +71,7 @@ const CounterModal = ({ onExit, writeComplete, sayingNr, borderColor}) => {
               
             ) : (
               <View style={{height: "100%", width: "100%", justifyContent: "center"}}>
-              <CustomLoader x={50} color={"#484F78"}/></View>
+              <CustomLoader x={50} color={"#484F78"} special={true}/></View>
             )}
             </View>
           </View>

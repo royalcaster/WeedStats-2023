@@ -20,10 +20,12 @@
     "expo-dev-client": "~2.0.1",
     "expo-linear-gradient": "^12.0.1",
     "expo-local-authentication": "^13.0.2",
+    "expo-location": "^15.0.1",
     "expo-random": "~13.0.0",
     "expo-splash-screen": "~0.17.5",
     "expo-status-bar": "~1.4.2",
     "expo-system-ui": "~2.0.1",
+    "expo-updates": "~0.15.6",
     "expo-web-browser": "^12.0.0",
     "moment": "^2.29.4",
     "patch-package": "^6.5.0",
@@ -36,8 +38,7 @@
     "react-native-svg": "13.4.0",
     "react-native-switch-selector": "^2.3.0",
     "react-native-toggle-element": "^2.0.1",
-    "react-native-uuid": "^2.0.1",
-    "expo-updates": "~0.15.6"
+    "react-native-uuid": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

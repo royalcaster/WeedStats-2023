@@ -30,7 +30,7 @@ import { FriendListContext } from "./src/data/FriendListContext";
 import { ConfigContext } from "./src/data/ConfigContext";
 import { getAuth, GoogleAuthProvider, signInWithCredential, onAuthStateChanged } from '@firebase/auth'
 import { app, firestore } from './src/data/FirebaseConfig'
-import { doc, getDoc, updateDoc } from "@firebase/firestore";
+import { doc, getDoc, updateDoc, deleteDoc, setDoc } from "@firebase/firestore";
 
 //Data
 import sayings from './src/data/Sayings'
@@ -40,6 +40,7 @@ import { useFonts } from "expo-font";
 import * as Google from 'expo-auth-session/providers/google'
 import * as WebBrowser from 'expo-web-browser'
 import { makeRedirectUri } from "expo-auth-session";
+import * as Location from "expo-location";
 
 //Custom Components
 import CounterModal from './src/components/common/CounterModal'

@@ -394,11 +394,6 @@ const FriendPage = ({ show, userid, onExit, refresh, toggleNavbar }) => {
               
             </View>
 
-              {/* <View style={{alignSelf: "center"}}>
-              {!loading ? 
-              <ProfileImage url={user.photoUrl} x={responsiveHeight(9)} type={1}/> : <View style={{height: 80}}></View>}
-              </View> */}
-
               <View style={{height: responsiveHeight(1)}}></View>
 
               <View style={{justifyContent: "center", alignItems: "center"}}>
