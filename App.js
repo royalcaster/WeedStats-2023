@@ -1,25 +1,15 @@
 //React
 import React, { useState, useEffect } from "react";
-import { Text, View, Modal, StyleSheet, Dimensions, Vibration, StatusBar } from 'react-native'
+import { Text, View, Modal, StyleSheet, Dimensions, Vibration, StatusBar, AppRegistry, LogBox } from 'react-native'
 import AsyncStorage from "@react-native-async-storage/async-storage";
-/* import { useState, useEffect } from "react";
-import {
-  StyleSheet,
-  Platform,
-  Text,
-  View,
-  Modal,
-  Vibration,
-  StatusBar
-} from "react-native"; */
 
-/* try {
+try {
   LogBox.ignoreLogs(["Setting a timer for a long period of time"]);
 } catch (e) {
   console.log("Error", e);
 } 
 
-AppRegistry.registerComponent("main", () => App); */
+AppRegistry.registerComponent("main", () => App);
 
 //Service
 import { UserContext } from "./src/data/UserContext";
@@ -41,6 +31,7 @@ import * as Google from 'expo-auth-session/providers/google'
 import * as WebBrowser from 'expo-web-browser'
 import { makeRedirectUri } from "expo-auth-session";
 import * as Location from "expo-location";
+import * as NavigationBar from 'expo-navigation-bar'
 
 //Custom Components
 import CounterModal from './src/components/common/CounterModal'
@@ -80,6 +71,7 @@ const App = () => {
 
   useEffect(() => {
     StatusBar.setBackgroundColor("#1E2132");
+    NavigationBar.setBackgroundColorAsync("#1E2132");
     loadSettings();
     checkForUser();
     getFriendList();

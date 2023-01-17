@@ -161,11 +161,11 @@ const StatsDashboard = ({ localData }) => {
             textColor={"white"}
             backgroundColor={"#131520"}
             selectedColor={"white"}
-            buttonColor={"#0080FF"}
+            buttonColor={"#484F78"}
             textStyle={{ fontFamily: "PoppinsLight", fontSize: 12, height: "100%", width: "100%"}}
             selectedTextStyle={{ fontFamily: "PoppinsBlack", fontSize: 12}}
             style={{backgroundColor: "#131520", borderRadius: 10}}
-            selectedTextContainerStyle={{borderRadius: 10, backgroundColor: "#0080FF", height: "100%", width: "100%"}}
+            selectedTextContainerStyle={{borderRadius: 10, backgroundColor: "#484F78", height: "100%", width: "100%"}}
           />
         </View>
 
@@ -359,11 +359,11 @@ const StatsDashboard = ({ localData }) => {
             textColor={"white"}
             backgroundColor={"#131520"}
             selectedColor={"white"}
-            buttonColor={"#0080FF"}
+            buttonColor={"#484F78"}
             textStyle={{ fontFamily: "PoppinsLight", fontSize: 12, height: "100%", width: "100%"}}
             selectedTextStyle={{ fontFamily: "PoppinsBlack", fontSize: 12}}
             style={{backgroundColor: "#131520", borderRadius: 10, width: "100%"}}
-            selectedTextContainerStyle={{borderRadius: 10, backgroundColor: "#0080FF", height: "100%", width: "100%"}}
+            selectedTextContainerStyle={{borderRadius: 10, backgroundColor: "#484F78", height: "100%", width: "100%"}}
           />
 
           <View style={{ height: 20 }}></View>

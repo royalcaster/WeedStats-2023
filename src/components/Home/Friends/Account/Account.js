@@ -394,7 +394,7 @@ const Account = ({ handleLogOut, onexit, show, toggleNavbar, deleteAccount }) =>
         />
 
 
-        <View style={{ width: "100%" }}>
+        <View style={{ width: "80%", alignSelf: "center", borderRadius: 10, overflow: "hidden" }}>
           <TouchableNativeFeedback
             background={TouchableNativeFeedback.Ripple(
               "rgba(255,255,255,0.05)",
